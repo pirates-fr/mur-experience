@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mur des expériences</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Formulaire de connexion -->
+  <div id="loginForm">
+    <h2>Connexion</h2>
+    <input type="text" id="userId" placeholder="Identifiant">
+    <input type="password" id="userPassword" placeholder="Mot de passe">
+    <button onclick="login()" class="auth-title">Se connecter</button>
+    <a href="#" onclick="showSignup()" id="signupLink">Pas encore inscrit ?</a>
+  </div>
+
+  <!-- Formulaire d'inscription -->
+  <div id="signupForm" style="display:none;">
+    <h2>Inscription</h2>
+    <input type="text" id="newUserId" placeholder="Identifiant">
+    <input type="password" id="newUserPassword" placeholder="Mot de passe">
+    <button onclick="signup()" class="signup-button" class="auth-title">S'inscrire</button>
+    <a href="#" onclick="showLogin()">Déjà inscrit ?</a>
+  </div>
+
+  <!-- Mur des expériences -->
+  <div id="messageBoard" style="display:none;">
+    <h2 class="main-title">Mur des expériences</h2>
+    <div id="messages" class="messages-container"></div>
+    <div class="message-input-container">
+      <textarea id="messageInput" placeholder="Décris ton expérience..."></textarea>
+      <button onclick="postMessage()">Poster une expérience</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
